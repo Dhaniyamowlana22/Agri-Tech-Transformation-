@@ -303,6 +303,3 @@ const _nav = [
 ]
 
 export default _nav
-
-
-hi hi 
