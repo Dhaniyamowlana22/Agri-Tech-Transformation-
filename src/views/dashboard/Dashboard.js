@@ -16,6 +16,8 @@ import {
   CTableDataCell,
   CTableHead,
   CTableHeaderCell,
+  cibToggl,
+  cisBatteryCharge,
   CTableRow,
 } from '@coreui/react'
 import { CChartLine } from '@coreui/react-chartjs'
@@ -31,17 +33,27 @@ import {
   cibGoogle,
   cibFacebook,
   cibLinkedin,
+  cilCloud,
+  cilSun,
+  cilRain,
+  cibMeteor,
   cifBr,
   cifEs,
   cifFr,
   cifIn,
   cifPl,
   cifUs,
+  cibIcq,
   cibTwitter,
   cilCloudDownload,
   cilPeople,
   cilUser,
+  cilToggleOn,
+  cidToggleOff,
   cilUserFemale,
+  cilCheck,
+  cilX,
+  cilPowerStandby,
 } from '@coreui/icons'
 
 import avatar1 from 'src/assets/images/avatars/1.jpg'
@@ -50,19 +62,25 @@ import avatar3 from 'src/assets/images/avatars/3.jpg'
 import avatar4 from 'src/assets/images/avatars/4.jpg'
 import avatar5 from 'src/assets/images/avatars/5.jpg'
 import avatar6 from 'src/assets/images/avatars/6.jpg'
+import avatar7 from 'src/assets/images/avatars/s1.jpeg'
+import avatar8 from 'src/assets/images/avatars/s2.jpeg'
+import avatar9 from 'src/assets/images/avatars/s3.jpeg'
+import avatar10 from 'src/assets/images/avatars/s4.jpeg'
+import avatar11 from 'src/assets/images/avatars/s5.jpeg'
+import avatar12 from 'src/assets/images/avatars/s6.png'
 
-import WidgetsBrand from '../widgets/WidgetsBrand'
+// import WidgetsBrand from '../widgets/WidgetsBrand'
 import WidgetsDropdown from '../widgets/WidgetsDropdown'
 
 const Dashboard = () => {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 
   const progressExample = [
-    { title: 'Visits', value: '29.703 Users', percent: 40, color: 'success' },
-    { title: 'Unique', value: '24.093 Users', percent: 20, color: 'info' },
-    { title: 'Pageviews', value: '78.706 Views', percent: 60, color: 'warning' },
-    { title: 'New Users', value: '22.123 Users', percent: 80, color: 'danger' },
-    { title: 'Bounce Rate', value: 'Average Rate', percent: 40.15, color: 'primary' },
+    { title: 'Total Area', value: '29.703 Area', percent: 40, color: 'success' },
+    { title: 'Total Crop', value: '24.093 Crop', percent: 20, color: 'info' },
+    { title: 'Total Yield', value: '78.706 Yield', percent: 60, color: 'warning' },
+    { title: 'Total Revenue', value: '22.123 Revenue', percent: 80, color: 'danger' },
+    { title: 'Total plant', value: ' plant', percent: 40.15, color: 'primary' },
   ]
 
   const progressGroupExample1 = [
@@ -75,106 +93,108 @@ const Dashboard = () => {
     { title: 'Sunday', value1: 9, value2: 69 },
   ]
 
+  // const progressGroupExample3 = [
+  //   { title: 'Cloudy', icon: cilCloud, percent: 56, value: '' },
+  //   { title: 'Sunny', icon: cilSun, percent: 15, value: '' },
+  //   { title: 'Rainy', icon: cilRain, percent: 11, value: '' },
+  //   { title: 'wind', icon: cibMeteor, percent: 8, value: '' },
+  // ]
   const progressGroupExample2 = [
-    { title: 'Male', icon: cilUser, value: 53 },
-    { title: 'Female', icon: cilUserFemale, value: 43 },
+    { title: 'Corn', icon: cibIcq, value: 53 },
+    { title: 'Rice', icon: cibIcq, value: 83 },
+    { title: 'Barley', icon: cibIcq, value: 73 },
+    { title: 'Oats', icon: cibIcq, value: 43 },
+    { title: 'Wheat', icon: cibIcq, value: 27 },
+    { title: 'Soybean', icon: cibIcq, value: 93 },
   ]
-
-  const progressGroupExample3 = [
-    { title: 'Organic Search', icon: cibGoogle, percent: 56, value: '191,235' },
-    { title: 'Facebook', icon: cibFacebook, percent: 15, value: '51,223' },
-    { title: 'Twitter', icon: cibTwitter, percent: 11, value: '37,564' },
-    { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
-  ]
-
   const tableExample = [
     {
-      avatar: { src: avatar1, status: 'success' },
+      avatar: { src: avatar7, status: 'success' },
       user: {
-        name: 'Yiorgos Avraamu',
+        name: 'Ultra Sonic Sensor',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: 'June 1, 2023',
       },
-      country: { name: 'USA', flag: cifUs },
+      country: { name: 'USA', flag: cilPowerStandby },
       usage: {
-        value: 50,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        value: 80,
+        period: 'Nov 11, 2023 - Dec 10, 2023',
         color: 'success',
       },
-      payment: { name: 'Mastercard', icon: cibCcMastercard },
+      payment: { name: 's', icon: cilCheck },
       activity: '10 sec ago',
     },
     {
-      avatar: { src: avatar2, status: 'danger' },
+      avatar: { src: avatar8, status: 'danger' },
       user: {
-        name: 'Avram Tarasios',
+        name: 'Nutrient Sensor',
         new: false,
-        registered: 'Jan 1, 2021',
+        registered: 'June 10, 2023',
       },
-      country: { name: 'Brazil', flag: cifBr },
+      country: { name: 'Brazil', flag: cilPowerStandby },
       usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        value: 62,
+        period: 'Jun 11, 2023 - Jul 17, 2023',
         color: 'info',
       },
-      payment: { name: 'Visa', icon: cibCcVisa },
+      payment: { name: 'Visa', icon: cilCheck },
       activity: '5 minutes ago',
     },
     {
-      avatar: { src: avatar3, status: 'warning' },
-      user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'India', flag: cifIn },
+      avatar: { src: avatar9, status: 'success' },
+      user: { name: 'Infrared Sensor', new: true, registered: 'May 7, 2023' },
+      country: { name: 'India', flag: cilPowerStandby },
       usage: {
         value: 74,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: 'Aug 21, 2023 - Nov 10, 2023',
         color: 'warning',
       },
-      payment: { name: 'Stripe', icon: cibCcStripe },
+      payment: { name: 'Stripe', icon: cilCheck },
       activity: '1 hour ago',
     },
     {
-      avatar: { src: avatar4, status: 'secondary' },
-      user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2021' },
-      country: { name: 'France', flag: cifFr },
+      avatar: { src: avatar10, status: 'success' },
+      user: { name: 'Crop Health Sensor', new: true, registered: 'Dec 8, 2023' },
+      country: { name: 'France', flag: cilPowerStandby },
       usage: {
         value: 98,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: 'Dec 11, 2023 - Jan 10, 2024',
         color: 'danger',
       },
-      payment: { name: 'PayPal', icon: cibCcPaypal },
+      payment: { name: 'PayPal', icon: cilX },
       activity: 'Last month',
     },
     {
-      avatar: { src: avatar5, status: 'success' },
+      avatar: { src: avatar11, status: 'success' },
       user: {
-        name: 'Agapetus Tadeáš',
+        name: 'Weather Station Sensor',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: 'June 9, 2023',
       },
-      country: { name: 'Spain', flag: cifEs },
+      country: { name: 'Spain', flag: cilPowerStandby },
       usage: {
-        value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        value: 32,
+        period: 'Jun 11, 2023 - Aug 24, 2023',
         color: 'primary',
       },
-      payment: { name: 'Google Wallet', icon: cibCcApplePay },
+      payment: { name: 'Google Wallet', icon: cilCheck },
       activity: 'Last week',
     },
     {
-      avatar: { src: avatar6, status: 'danger' },
+      avatar: { src: avatar12, status: 'danger' },
       user: {
-        name: 'Friderik Dávid',
+        name: 'Gps & Location Sensor',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: 'Jan 1, 2024',
       },
-      country: { name: 'Poland', flag: cifPl },
+      country: { name: 'Poland', flag: cilPowerStandby },
       usage: {
         value: 43,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: 'Jan 11, 2024 - Feb 10, 2024',
         color: 'success',
       },
-      payment: { name: 'Amex', icon: cibCcAmex },
-      activity: 'Last week',
+      payment: { name: 'Amex', icon: cilCheck },
+      activity: '3 days ago',
     },
   ]
 
@@ -186,9 +206,9 @@ const Dashboard = () => {
           <CRow>
             <CCol sm={5}>
               <h4 id="traffic" className="card-title mb-0">
-                Traffic
+                Agri Tech User Dashbord Overview
               </h4>
-              <div className="small text-medium-emphasis">January - July 2021</div>
+              <div className="small text-medium-emphasis">July 2023 - January 2024</div>
             </CCol>
             <CCol sm={7} className="d-none d-md-block">
               <CButton color="primary" className="float-end">
@@ -214,7 +234,7 @@ const Dashboard = () => {
               labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
               datasets: [
                 {
-                  label: 'My First dataset',
+                  label: 'Crop',
                   backgroundColor: hexToRgba(getStyle('--cui-info'), 10),
                   borderColor: getStyle('--cui-info'),
                   pointHoverBackgroundColor: getStyle('--cui-info'),
@@ -231,7 +251,7 @@ const Dashboard = () => {
                   fill: true,
                 },
                 {
-                  label: 'My Second dataset',
+                  label: 'Yield',
                   backgroundColor: 'transparent',
                   borderColor: getStyle('--cui-success'),
                   pointHoverBackgroundColor: getStyle('--cui-success'),
@@ -247,7 +267,7 @@ const Dashboard = () => {
                   ],
                 },
                 {
-                  label: 'My Third dataset',
+                  label: 'Revenue',
                   backgroundColor: 'transparent',
                   borderColor: getStyle('--cui-danger'),
                   pointHoverBackgroundColor: getStyle('--cui-danger'),
@@ -308,26 +328,38 @@ const Dashboard = () => {
         </CCardFooter>
       </CCard>
 
-      <WidgetsBrand withCharts />
+      {/* <WidgetsBrand withCharts /> */}
 
       <CRow>
         <CCol xs>
           <CCard className="mb-4">
-            <CCardHeader>Traffic {' & '} Sales</CCardHeader>
+            <CCardHeader>Agri-Tech {' & '} Transformation</CCardHeader>
             <CCardBody>
               <CRow>
                 <CCol xs={12} md={6} xl={6}>
                   <CRow>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-info py-1 px-3">
-                        <div className="text-medium-emphasis small">New Clients</div>
-                        <div className="fs-5 fw-semibold">9,123</div>
+                        <div className="text-medium-emphasis small">Ultra Sonic Senssor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
                       </div>
                     </CCol>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Recurring Clients</div>
-                        <div className="fs-5 fw-semibold">22,643</div>
+                        <div className="text-medium-emphasis small">Nutrient Sensor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
+                      </div>
+                    </CCol>
+                    <CCol sm={6}>
+                      <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
+                        <div className="text-medium-emphasis small">Weather Station Sensor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
+                      </div>
+                    </CCol>
+                    <CCol sm={6}>
+                      <div className="border-start border-start-4 border-start-info py-1 px-3">
+                        <div className="text-medium-emphasis small">GPS & Location Sensor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
                       </div>
                     </CCol>
                   </CRow>
@@ -350,14 +382,26 @@ const Dashboard = () => {
                   <CRow>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Pageviews</div>
-                        <div className="fs-5 fw-semibold">78,623</div>
+                        <div className="text-medium-emphasis small">Infrared Sensor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
                       </div>
                     </CCol>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Organic</div>
-                        <div className="fs-5 fw-semibold">49,123</div>
+                        <div className="text-medium-emphasis small">Crop Health Sensor</div>
+                        <div className="fs-5 fw-semibold">Active</div>
+                      </div>
+                    </CCol>
+                    <CCol sm={6}>
+                      <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
+                        <div className="text-medium-emphasis small">LCD Display</div>
+                        <div className="fs-5 fw-semibold">Deactive</div>
+                      </div>
+                    </CCol>
+                    <CCol sm={6}>
+                      <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
+                        <div className="text-medium-emphasis small">Alarm</div>
+                        <div className="fs-5 fw-semibold">Active</div>
                       </div>
                     </CCol>
                   </CRow>
@@ -379,7 +423,7 @@ const Dashboard = () => {
 
                   <div className="mb-5"></div>
 
-                  {progressGroupExample3.map((item, index) => (
+                  {/* {progressGroupExample3.map((item, index) => (
                     <div className="progress-group" key={index}>
                       <div className="progress-group-header">
                         <CIcon className="me-2" icon={item.icon} size="lg" />
@@ -393,7 +437,7 @@ const Dashboard = () => {
                         <CProgress thin color="success" value={item.percent} />
                       </div>
                     </div>
-                  ))}
+                  ))} */}
                 </CCol>
               </CRow>
 
@@ -405,11 +449,11 @@ const Dashboard = () => {
                     <CTableHeaderCell className="text-center">
                       <CIcon icon={cilPeople} />
                     </CTableHeaderCell>
-                    <CTableHeaderCell>User</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Country</CTableHeaderCell>
+                    <CTableHeaderCell>Sensors</CTableHeaderCell>
+                    <CTableHeaderCell className="text-center">Power</CTableHeaderCell>
                     <CTableHeaderCell>Usage</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Payment Method</CTableHeaderCell>
-                    <CTableHeaderCell>Activity</CTableHeaderCell>
+                    <CTableHeaderCell className="text-center">Status</CTableHeaderCell>
+                    <CTableHeaderCell>Activity Log</CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
@@ -443,7 +487,7 @@ const Dashboard = () => {
                         <CIcon size="xl" icon={item.payment.icon} />
                       </CTableDataCell>
                       <CTableDataCell>
-                        <div className="small text-medium-emphasis">Last login</div>
+                        <div className="small text-medium-emphasis">Last Update</div>
                         <strong>{item.activity}</strong>
                       </CTableDataCell>
                     </CTableRow>
