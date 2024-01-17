@@ -685,7 +685,7 @@ const Dashboard = () => {
                     random(50, 200),
                   ],
                   fill: true,
-                },
+                },3
                 {
                   label: 'Yield',
                   backgroundColor: 'transparent',
