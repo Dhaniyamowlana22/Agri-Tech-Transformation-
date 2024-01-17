@@ -768,7 +768,7 @@ const Dashboard = () => {
                         <CProgress thin color="success" value={item.percent} />
                       </div>
                     </div>
-                  ))} */}
+                  ))} */}Bakc
                 </CCol>
               </CRow>
 
