@@ -692,7 +692,7 @@ const Dashboard = () => {
                         <div className="fs-5 fw-semibold">Active</div>
                       </div>
                     </CCol>
-                  </CRow>
+                  </CRow>23
 
                   <hr className="mt-0" />
                   {progressGroupExample1.map((item, index) => (
