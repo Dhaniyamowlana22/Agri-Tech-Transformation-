@@ -722,7 +722,7 @@ const Dashboard = () => {
                         <div className="text-medium-emphasis small">Crop Health Sensor</div>
                         <div className="fs-5 fw-semibold">Active</div>
                       </div>
-                    </CCol>
+                    </CCol> Progress
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
                         <div className="text-medium-emphasis small">LCD Display</div>
