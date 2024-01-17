@@ -680,7 +680,7 @@ const Dashboard = () => {
                     random(50, 200),
                     random(50, 200),
                     random(50, 200),
-                    random(50, 200),
+                    random(50, 200),4
                     random(50, 200),
                     random(50, 200),
                   ],
