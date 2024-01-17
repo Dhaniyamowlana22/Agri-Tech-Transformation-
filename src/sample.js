@@ -290,7 +290,411 @@ const Dashboard = () => {
               elements: {
                 line: {
                   tension: 0.4,
+                },import avatar1 from 'src/assets/images/avatars/1.jpg'
+                import avatar2 from 'src/assets/images/avatars/2.jpg'
+                import avatar3 from 'src/assets/images/avatars/3.jpg'
+                import avatar4 from 'src/assets/images/avatars/4.jpg'
+                import avatar5 from 'src/assets/images/avatars/5.jpg'
+                import avatar6 from 'src/assets/images/avatars/6.jpg'
+                import avatar7 from 'src/assets/images/avatars/s1.jpeg'
+                import avatar8 from 'src/assets/images/avatars/s2.jpeg'
+                import avatar9 from 'src/assets/images/avatars/s3.jpeg'
+                import avatar10 from 'src/assets/images/avatars/s4.jpeg'
+                import avatar11 from 'src/assets/images/avatars/s5.jpeg'
+                import avatar12 from 'src/assets/images/avatars/s6.png'
+                
+                // import WidgetsBrand from '../widgets/WidgetsBrand'
+                import WidgetsDropdown from '../widgets/WidgetsDropdown'
+                
+                const Dashboard = () => {
+                  const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+                
+                  const progressExample = [
+                    { title: 'Total Area', value: '29.703 Area', percent: 40, color: 'success' },
+                    { title: 'Total Crop', value: '24.093 Crop', percent: 20, color: 'info' },
+                    { title: 'Total Yield', value: '78.706 Yield', percent: 60, color: 'warning' },
+                    { title: 'Total Revenue', value: '22.123 Revenue', percent: 80, color: 'danger' },
+                    { title: 'Total plant', value: ' plant', percent: 40.15, color: 'primary' },
+                  ]
+                
+                  const progressGroupExample1 = [
+                    { title: 'Monday', value1: 34, value2: 78 },
+                    { title: 'Tuesday', value1: 56, value2: 94 },
+                    { title: 'Wednesday', value1: 12, value2: 67 },
+                    { title: 'Thursday', value1: 43, value2: 91 },
+                    { title: 'Friday', value1: 22, value2: 73 },
+                    { title: 'Saturday', value1: 53, value2: 82 },
+                    { title: 'Sunday', value1: 9, value2: 69 },
+                  ]
+                
+                  // const progressGroupExample3 = [
+                  //   { title: 'Cloudy', icon: cilCloud, percent: 56, value: '' },
+                  //   { title: 'Sunny', icon: cilSun, percent: 15, value: '' },
+                  //   { title: 'Rainy', icon: cilRain, percent: 11, value: '' },
+                  //   { title: 'wind', icon: cibMeteor, percent: 8, value: '' },
+                  // ]
+                  const progressGroupExample2 = [
+                    { title: 'Corn', icon: cibIcq, value: 53 },
+                    { title: 'Rice', icon: cibIcq, value: 83 },
+                    { title: 'Barley', icon: cibIcq, value: 73 },
+                    { title: 'Oats', icon: cibIcq, value: 43 },
+                    { title: 'Wheat', icon: cibIcq, value: 27 },
+                    { title: 'Soybean', icon: cibIcq, value: 93 },
+                  ]
+                  const tableExample = [
+                    {
+                      avatar: { src: avatar7, status: 'success' },
+                      user: {
+                        name: 'Ultra Sonic Sensor',
+                        new: true,
+                        registered: 'June 1, 2023',
+                      },
+                      country: { name: 'USA', flag: cilPowerStandby },
+                      usage: {
+                        value: 80,
+                        period: 'Nov 11, 2023 - Dec 10, 2023',
+                        color: 'success',
+                      },
+                      payment: { name: 's', icon: cilCheck },
+                      activity: '10 sec ago',
+                    },
+                    {
+                      avatar: { src: avatar8, status: 'danger' },
+                      user: {
+                        name: 'Nutrient Sensor',
+                        new: false,
+                        registered: 'June 10, 2023',
+                      },
+                      country: { name: 'Brazil', flag: cilPowerStandby },
+                      usage: {
+                        value: 62,
+                        period: 'Jun 11, 2023 - Jul 17, 2023',
+                        color: 'info',
+                      },
+                      payment: { name: 'Visa', icon: cilCheck },
+                      activity: '5 minutes ago',
+                    },
+                    {
+                      avatar: { src: avatar9, status: 'success' },
+                      user: { name: 'Infrared Sensor', new: true, registered: 'May 7, 2023' },
+                      country: { name: 'India', flag: cilPowerStandby },
+                      usage: {
+                        value: 74,
+                        period: 'Aug 21, 2023 - Nov 10, 2023',
+                        color: 'warning',
+                      },
+                      payment: { name: 'Stripe', icon: cilCheck },
+                      activity: '1 hour ago',
+                    },
+                    {
+                      avatar: { src: avatar10, status: 'success' },
+                      user: { name: 'Crop Health Sensor', new: true, registered: 'Dec 8, 2023' },
+                      country: { name: 'France', flag: cilPowerStandby },
+                      usage: {
+                        value: 98,
+                        period: 'Dec 11, 2023 - Jan 10, 2024',
+                        color: 'danger',
+                      },
+                      payment: { name: 'PayPal', icon: cilX },
+                      activity: 'Last month',
+                    },
+                    {
+                      avatar: { src: avatar11, status: 'success' },
+                      user: {
+                        name: 'Weather Station Sensor',
+                        new: true,
+                        registered: 'June 9, 2023',
+                      },
+                      country: { name: 'Spain', flag: cilPowerStandby },
+                      usage: {
+                        value: 32,
+                        period: 'Jun 11, 2023 - Aug 24, 2023',
+                        color: 'primary',
+                      },
+                      payment: { name: 'Google Wallet', icon: cilCheck },
+                      activity: 'Last week',
+                    },
+                    {
+                      avatar: { src: avatar12, status: 'danger' },
+                      user: {
+                        name: 'Gps & Location Sensor',
+                        new: true,
+                        registered: 'Jan 1, 2024',
+                      },
+                      country: { name: 'Poland', flag: cilPowerStandby },
+                      usage: {
+                        value: 43,
+                        period: 'Jan 11, 2024 - Feb 10, 2024',
+                        color: 'success',
+                      },
+                      payment: { name: 'Amex', icon: cilCheck },
+                      activity: '3 days ago',
+                    },
+                  ]
+                
+                  return (
+                    <>
+                      <WidgetsDropdown />
+                      <CCard className="mb-4">
+                        <CCardBody>
+                          <CRow>
+                            <CCol sm={5}>
+                              <h4 id="traffic" className="card-title mb-0">
+                                Agri Tech User Dashbord Overview
+                              </h4>
+                              <div className="small text-medium-emphasis">July 2023 - January 2024</div>
+                            </CCol>
+                            <CCol sm={7} className="d-none d-md-block">
+                              <CButton color="primary" className="float-end">
+                                <CIcon icon={cilCloudDownload} />
+                              </CButton>
+                              <CButtonGroup className="float-end me-3">
+                                {['Day', 'Month', 'Year'].map((value) => (
+                                  <CButton
+                                    color="outline-secondary"
+                                    key={value}
+                                    className="mx-0"
+                                    active={value === 'Month'}
+                                  >
+                                    {value}
+                                  </CButton>
+                                ))}
+                              </CButtonGroup>
+                            </CCol>
+                          </CRow>
+                          <CChartLine
+                            style={{ height: '300px', marginTop: '40px' }}
+                            data={{
+                              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                              datasets: [
+                                {
+                                  label: 'Crop',
+                                  backgroundColor: hexToRgba(getStyle('--cui-info'), 10),
+                                  borderColor: getStyle('--cui-info'),
+                                  pointHoverBackgroundColor: getStyle('--cui-info'),
+                                  borderWidth: 2,
+                                  data: [
+                                    random(50, 200),
+                                    random(50, 200),
+                                    random(50, 200),
+                                    random(50, 200),
+                                    random(50, 200),
+                                    random(50, 200),
+                                    random(50, 200),
+                                  ],
+                                  fill: true,
+                                },
+                                {
+                                  label: 'Yield',
+                                  backgroundColor: 'transparent',
+                                  borderColor: getStyle('--cui-success'),
+                                  pointHoverBackgroundColor: getStyle('--cui-success'),
+                                  borderWidth: 2,
+                                  data: [
+                                    random(50, 200),
+                                    random(50, 200),import avatar1 from 'src/assets/images/avatars/1.jpg'
+import avatar2 from 'src/assets/images/avatars/2.jpg'
+import avatar3 from 'src/assets/images/avatars/3.jpg'
+import avatar4 from 'src/assets/images/avatars/4.jpg'
+import avatar5 from 'src/assets/images/avatars/5.jpg'
+import avatar6 from 'src/assets/images/avatars/6.jpg'
+import avatar7 from 'src/assets/images/avatars/s1.jpeg'
+import avatar8 from 'src/assets/images/avatars/s2.jpeg'
+import avatar9 from 'src/assets/images/avatars/s3.jpeg'
+import avatar10 from 'src/assets/images/avatars/s4.jpeg'
+import avatar11 from 'src/assets/images/avatars/s5.jpeg'
+import avatar12 from 'src/assets/images/avatars/s6.png'
+
+// import WidgetsBrand from '../widgets/WidgetsBrand'
+import WidgetsDropdown from '../widgets/WidgetsDropdown'
+
+const Dashboard = () => {
+  const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+
+  const progressExample = [
+    { title: 'Total Area', value: '29.703 Area', percent: 40, color: 'success' },
+    { title: 'Total Crop', value: '24.093 Crop', percent: 20, color: 'info' },
+    { title: 'Total Yield', value: '78.706 Yield', percent: 60, color: 'warning' },
+    { title: 'Total Revenue', value: '22.123 Revenue', percent: 80, color: 'danger' },
+    { title: 'Total plant', value: ' plant', percent: 40.15, color: 'primary' },
+  ]
+
+  const progressGroupExample1 = [
+    { title: 'Monday', value1: 34, value2: 78 },
+    { title: 'Tuesday', value1: 56, value2: 94 },
+    { title: 'Wednesday', value1: 12, value2: 67 },
+    { title: 'Thursday', value1: 43, value2: 91 },
+    { title: 'Friday', value1: 22, value2: 73 },
+    { title: 'Saturday', value1: 53, value2: 82 },
+    { title: 'Sunday', value1: 9, value2: 69 },
+  ]
+
+  // const progressGroupExample3 = [
+  //   { title: 'Cloudy', icon: cilCloud, percent: 56, value: '' },
+  //   { title: 'Sunny', icon: cilSun, percent: 15, value: '' },
+  //   { title: 'Rainy', icon: cilRain, percent: 11, value: '' },
+  //   { title: 'wind', icon: cibMeteor, percent: 8, value: '' },
+  // ]
+  const progressGroupExample2 = [
+    { title: 'Corn', icon: cibIcq, value: 53 },
+    { title: 'Rice', icon: cibIcq, value: 83 },
+    { title: 'Barley', icon: cibIcq, value: 73 },
+    { title: 'Oats', icon: cibIcq, value: 43 },
+    { title: 'Wheat', icon: cibIcq, value: 27 },
+    { title: 'Soybean', icon: cibIcq, value: 93 },
+  ]
+  const tableExample = [
+    {
+      avatar: { src: avatar7, status: 'success' },
+      user: {
+        name: 'Ultra Sonic Sensor',
+        new: true,
+        registered: 'June 1, 2023',
+      },
+      country: { name: 'USA', flag: cilPowerStandby },
+      usage: {
+        value: 80,
+        period: 'Nov 11, 2023 - Dec 10, 2023',
+        color: 'success',
+      },
+      payment: { name: 's', icon: cilCheck },
+      activity: '10 sec ago',
+    },
+    {
+      avatar: { src: avatar8, status: 'danger' },
+      user: {
+        name: 'Nutrient Sensor',
+        new: false,
+        registered: 'June 10, 2023',
+      },
+      country: { name: 'Brazil', flag: cilPowerStandby },
+      usage: {
+        value: 62,
+        period: 'Jun 11, 2023 - Jul 17, 2023',
+        color: 'info',
+      },
+      payment: { name: 'Visa', icon: cilCheck },
+      activity: '5 minutes ago',
+    },
+    {
+      avatar: { src: avatar9, status: 'success' },
+      user: { name: 'Infrared Sensor', new: true, registered: 'May 7, 2023' },
+      country: { name: 'India', flag: cilPowerStandby },
+      usage: {
+        value: 74,
+        period: 'Aug 21, 2023 - Nov 10, 2023',
+        color: 'warning',
+      },
+      payment: { name: 'Stripe', icon: cilCheck },
+      activity: '1 hour ago',
+    },
+    {
+      avatar: { src: avatar10, status: 'success' },
+      user: { name: 'Crop Health Sensor', new: true, registered: 'Dec 8, 2023' },
+      country: { name: 'France', flag: cilPowerStandby },
+      usage: {
+        value: 98,
+        period: 'Dec 11, 2023 - Jan 10, 2024',
+        color: 'danger',
+      },
+      payment: { name: 'PayPal', icon: cilX },
+      activity: 'Last month',
+    },
+    {
+      avatar: { src: avatar11, status: 'success' },
+      user: {
+        name: 'Weather Station Sensor',
+        new: true,
+        registered: 'June 9, 2023',
+      },
+      country: { name: 'Spain', flag: cilPowerStandby },
+      usage: {
+        value: 32,
+        period: 'Jun 11, 2023 - Aug 24, 2023',
+        color: 'primary',
+      },
+      payment: { name: 'Google Wallet', icon: cilCheck },
+      activity: 'Last week',
+    },
+    {
+      avatar: { src: avatar12, status: 'danger' },
+      user: {
+        name: 'Gps & Location Sensor',
+        new: true,
+        registered: 'Jan 1, 2024',
+      },
+      country: { name: 'Poland', flag: cilPowerStandby },
+      usage: {
+        value: 43,
+        period: 'Jan 11, 2024 - Feb 10, 2024',
+        color: 'success',
+      },
+      payment: { name: 'Amex', icon: cilCheck },
+      activity: '3 days ago',
+    },
+  ]
+
+  return (
+    <>
+      <WidgetsDropdown />
+      <CCard className="mb-4">
+        <CCardBody>
+          <CRow>
+            <CCol sm={5}>
+              <h4 id="traffic" className="card-title mb-0">
+                Agri Tech User Dashbord Overview
+              </h4>
+              <div className="small text-medium-emphasis">July 2023 - January 2024</div>
+            </CCol>
+            <CCol sm={7} className="d-none d-md-block">
+              <CButton color="primary" className="float-end">
+                <CIcon icon={cilCloudDownload} />
+              </CButton>
+              <CButtonGroup className="float-end me-3">
+                {['Day', 'Month', 'Year'].map((value) => (
+                  <CButton
+                    color="outline-secondary"
+                    key={value}
+                    className="mx-0"
+                    active={value === 'Month'}
+                  >
+                    {value}
+                  </CButton>
+                ))}
+              </CButtonGroup>
+            </CCol>
+          </CRow>
+          <CChartLine
+            style={{ height: '300px', marginTop: '40px' }}
+            data={{
+              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+              datasets: [
+                {
+                  label: 'Crop',
+                  backgroundColor: hexToRgba(getStyle('--cui-info'), 10),
+                  borderColor: getStyle('--cui-info'),
+                  pointHoverBackgroundColor: getStyle('--cui-info'),
+                  borderWidth: 2,
+                  data: [
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                  ],
+                  fill: true,
                 },
+                {
+                  label: 'Yield',
+                  backgroundColor: 'transparent',
+                  borderColor: getStyle('--cui-success'),
+                  pointHoverBackgroundColor: getStyle('--cui-success'),
+                  borderWidth: 2,
+                  data: [
+                    random(50, 200),
+                    random(50, 200),
                 point: {
                   radius: 0,
                   hitRadius: 10,
