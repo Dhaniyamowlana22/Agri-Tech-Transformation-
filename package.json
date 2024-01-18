@@ -18,8 +18,9 @@
   "scripts": {
     "start": "node app.js",
     "test": "mocha --recursive --exit",
-    "sonar": "sonar-scanner"
-  },
+    "sonar": "sonar-scanner",
+    "build": "react-scripts build"
+  },  
   "author": "riaan@entersekt.com",
   "description": "Basic to-do list exercise"
 }
