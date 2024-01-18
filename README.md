@@ -1,24 +1,19 @@
+# node-todo-cicd
 
-# Agri Tech Project Admin Dashboard
+Run these commands:
 
-### Installation
 
-``` bash
-$ yarn install
-```
+`sudo apt install nodejs`
 
-### Basic usage
 
-``` bash
-# dev server with hot reload at http://localhost:3000
-$ yarn start
-```
+`sudo apt install npm`
 
-Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
 
-#### Build
+`npm install`
 
-```bash
-# build for production with minification
-$ yarn build
-```
+`node app.js`
+
+or Run by docker compose
+
+test
+
