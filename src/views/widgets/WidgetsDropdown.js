@@ -115,7 +115,7 @@ const WidgetsDropdown = () => {
               </span>
             </>
           }
-          title="Planted Crop"
+          title="Planted Crop"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -137,7 +137,7 @@ const WidgetsDropdown = () => {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                   {
-                    label: 'Agri Tech Planted Crop',
+                    label: 'Agri Tech Planted Crop',
                     backgroundColor: 'transparent',
                     borderColor: 'rgba(255,255,255,.55)',
                     pointBackgroundColor: getStyle('--cui-info'),
