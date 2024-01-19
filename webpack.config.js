@@ -1,6 +1,12 @@
-resolve: {
+const path = require('path');
+
+module.exports = {
+  // Other webpack configuration options...
+
+  resolve: {
     fallback: {
-      "querystring": require.resolve("querystring-es3")
+      "path": require.resolve("path-browserify"),
+      "zlib": require.resolve("browserify-zlib")
     }
   }
-  
+};
